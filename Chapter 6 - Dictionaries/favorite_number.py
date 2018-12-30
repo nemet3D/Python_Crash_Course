@@ -1,18 +1,19 @@
-# Favorite Numbers: Use a dictionary to store people’s favorite numbers.
-# Think of five names, and use them as keys in your dictionary. Think of
-# a favorite number for each person, and store each as a value in your
-# dictionary. Print each person’s name and their favorite number. For
-# even more fun, poll a few friends and get some actual data for your
-# program.
+# Favorite Numbers: Modify your program from Exercise 6-2 (page 102) so
+# each person can have more than one favorite number . Then print each
+# person’s name along with their favorite numbers.
 
 favorite_numbers = {
-    'john': '5',
-    'edward': '7',
-    'phil': '10',
-    'eli': '13'
+    'john': ['5', '6'],
+    'edward': ['7'],
+    'phil': ['10', '25', '63'],
+    'eli': ['13']
 }
 
-print("John's favorite number is: " + favorite_numbers['john'] + ".")
-print("Edward's favorite number is: " + favorite_numbers['edward'] + ".")
-print("Phil's favorite number is: " + favorite_numbers['phil'] + ".")
-print("Eli's favorite number is: " + favorite_numbers['eli'] + ".")
+for name, numbers in favorite_numbers.items():
+    if len(numbers) <= 1:
+        print("\n" + name.title() + "'s favorite number is:")
+        print("\t" + numbers[0].title())
+    else:
+        print("\n" + name.title() + "'s favorite numbers are:")
+        for number in numbers:
+            print("\t" + number.title())
