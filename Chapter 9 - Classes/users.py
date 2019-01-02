@@ -6,6 +6,8 @@
 # to the user. Create several instances representing different users,
 # and call both methods for each user.
 
+"""For users."""
+
 class User():
     """For users."""
 
@@ -23,15 +25,3 @@ class User():
         """Print a personalized greeting to the user."""
         print("\nWelcome " + self.first_name.title() + " " + 
             self.last_name.title() + "!")
-
-user_01 = User('albert', 'einstein')
-
-user_02 = User('marie', 'curie')
-
-user_01.describe_user()
-
-user_02.describe_user()
-
-user_01.greet_user()
-
-user_02.greet_user()
